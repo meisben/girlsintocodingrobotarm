@@ -155,7 +155,7 @@ class KitronikRoboticsBoard:
 
 
 # ------------------------------------------#
-# Helper function                           #
+# Helper functions                          #
 # ------------------------------------------#
 
 def displayCurrentMotorNumber(currentRotationMotor):
