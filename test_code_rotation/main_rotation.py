@@ -159,7 +159,7 @@ class KitronikRoboticsBoard:
 # Our variables
 currentRotationMotor = 0
 set_volume(100)
-display.show(Image.HAPPY)
+display.show(Image.SQUARE)
 
 # Create an infinite loop
 while True:
@@ -184,6 +184,7 @@ while True:
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=-15)
+        display.show(Image.RABBIT)
 
     # Detect if the button b has been pressed!
     elif button_b.is_pressed():
@@ -194,3 +195,4 @@ while True:
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=15)
+        display.show(Image.RABBIT)
