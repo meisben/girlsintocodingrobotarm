@@ -159,6 +159,8 @@ class KitronikRoboticsBoard:
 # Our variables
 currentRotationMotor = 0
 set_volume(100)
+
+# Display an image on start-up so that we know the program loaded correctly
 display.show(Image.SQUARE)
 
 # Create an infinite loop
