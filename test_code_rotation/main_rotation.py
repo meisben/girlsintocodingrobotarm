@@ -155,15 +155,38 @@ class KitronikRoboticsBoard:
 
 
 # ------------------------------------------#
-# Our main program                          #
+# Helper function                           #
 # ------------------------------------------#
 
+def displayCurrentMotorNumber(currentRotationMotor):
+
+    number1 = Image("00900:"
+                    "09900:"
+                    "00900:"
+                    "00900:"
+                    "09990")
+
+    number2 = Image("99999:"
+                    "99099:"
+                    "00990:"
+                    "09900:"
+                    "99999")
+
+    if(currentRotationMotor == 0):
+        display.show(number1)
+    else:
+        display.show(number2)
+
+
+# ------------------------------------------#
+# Our main program                          #
+# ------------------------------------------#
 # Our variables
 currentRotationMotor = 0
 set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
-display.show(Image.SQUARE)
+display.show(Image.RABBIT)
 
 # Create an infinite loop
 while True:
@@ -178,6 +201,8 @@ while True:
         display.scroll("Motor %d selected" % (
             2 if currentRotationMotor else 1), delay=120, wait=False, loop=False)
         sleep(1000)
+        # Show which motor is being controlled
+        displayCurrentMotorNumber(currentRotationMotor)
 
     # Detect if the button a has been pressed!
     elif button_a.is_pressed():
@@ -188,7 +213,8 @@ while True:
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=-15)
-        display.show(Image.RABBIT)
+        # Show which motor is being controlled
+        displayCurrentMotorNumber(currentRotationMotor)
 
     # Detect if the button b has been pressed!
     elif button_b.is_pressed():
@@ -199,4 +225,5 @@ while True:
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=15)
-        display.show(Image.RABBIT)
+        # Show which motor is being controlled
+        displayCurrentMotorNumber(currentRotationMotor)
