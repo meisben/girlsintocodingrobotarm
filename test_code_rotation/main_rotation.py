@@ -2,6 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Program Purpose: Rotate the joints (motors) of our robot arm
 # Author: Wei Jie Wong
+# Contributors: Sam Hoh, BMC
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 # ------------------------------------------#
