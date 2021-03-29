@@ -187,6 +187,9 @@ set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
 display.show(Image.RABBIT)
+microbit.sleep(1000)
+# Show which motor is being controlled
+displayCurrentMotorNumber(currentRotationMotor)
 
 # Create an infinite loop
 while True:
