@@ -166,11 +166,11 @@ def displayCurrentMotorNumber(currentRotationMotor):
                     "00900:"
                     "09990")
 
-    number2 = Image("99999:"
-                    "99099:"
-                    "00990:"
-                    "09900:"
-                    "99999")
+    number2 = Image("09990:"
+                    "09090:"
+                    "00900:"
+                    "09000:"
+                    "09990")
 
     if(currentRotationMotor == 0):
         display.show(number1)
@@ -186,8 +186,8 @@ currentRotationMotor = 0
 set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
-display.show(Image.RABBIT)
-microbit.sleep(1000)
+display.show(Image.SNAKE)
+sleep(2000)
 # Show which motor is being controlled
 displayCurrentMotorNumber(currentRotationMotor)
 
@@ -201,9 +201,9 @@ while True:
         music.pitch(200, duration=150, wait=True)
         # Select the motor we want to turn
         currentRotationMotor ^= 1
-        display.scroll("Motor %d selected" % (
+        display.scroll("Motor %d" % (
             2 if currentRotationMotor else 1), delay=120, wait=False, loop=False)
-        sleep(1000)
+        sleep(6000)
         # Show which motor is being controlled
         displayCurrentMotorNumber(currentRotationMotor)
 
@@ -212,7 +212,7 @@ while True:
         # Play a tune
         music.pitch(200, duration=150, wait=True)
         # Display a message
-        display.scroll("Rotating", delay=120, wait=False, loop=False)
+        display.scroll("- Rot", delay=120, wait=False, loop=False)
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=-15)
@@ -224,7 +224,7 @@ while True:
         # Play a tune
         music.pitch(200, duration=150, wait=True)
         # Display a message
-        display.scroll("Rotating", delay=120, wait=False, loop=False)
+        display.scroll("+ Rot", delay=120, wait=False, loop=False)
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
             theBoard, currentRotationMotor, angle=15)
