@@ -206,7 +206,7 @@ len_2 = 4.5
 set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
-display.show(Image.SNAKE)
+display.show(Image.GIRAFFE)
 sleep(2000)
 # Show which motor is being controlled
 displayCurrentMotorNumber(currentRotationMotor)
