@@ -186,8 +186,8 @@ x = 5
 y = 5
 current_theta_1 = 0
 current_theta_2 = 0
-len_1 = 9
-len_2 = 9
+len_1 = 4.5
+len_2 = 4.5
 
 set_volume(100)
 
