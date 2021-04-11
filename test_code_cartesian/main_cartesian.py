@@ -182,8 +182,8 @@ def displayXYimage():
 
 
 # Our variables
-x = 10
-y = 10
+x = 5
+y = 5
 current_theta_1 = 0
 current_theta_2 = 0
 len_1 = 9
@@ -236,7 +236,7 @@ while True:
         if button_a.is_pressed():
             music.pitch(200, duration=150, wait=True)
             y += 1
-            if y > 18:
+            if y > 9:
                 y = 1
             display.scroll("x=%d,y=%d" %
                            (x, y), delay=100, wait=True, loop=False)
@@ -247,7 +247,7 @@ while True:
         elif button_b.is_pressed():
             music.pitch(200, duration=150, wait=True)
             x += 1
-            if x > 18:
+            if x > 9:
                 x = 1
             display.scroll("x=%d,y=%d" %
                            (x, y), delay=100, wait=True, loop=False)
